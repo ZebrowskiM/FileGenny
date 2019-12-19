@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/FileGenny.dir/main.c.o CMakeFiles/FileGenny.dir/GenerateDummyText.c.o  -o FileGenny.exe -Wl,--out-implib,libFileGenny.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
