@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/GenerateDummyText.h
+stdbool.h
+-
+
+/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/main.c
+stdio.h
+-
+GenerateDummyText.h
+/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/GenerateDummyText.h
+
