@@ -1,8 +1,11 @@
 #include <stdio.h>
+#include <malloc.h>
 
 #include "GenerateDummyText.h"
 int main() {
     printf("Hello, World!\n");
-    printf("%s", GenerateDummyText(false,100));
+    char *data = GenerateDummyText(true,100);
+    printf("%s", data);
+    free(data);
     return 0;
 }
