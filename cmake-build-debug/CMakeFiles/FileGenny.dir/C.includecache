@@ -6,17 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/GenerateDummyText.c
+/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/GenerateDummyText.h
+stdbool.h
+-
+
+/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/main.c
 stdio.h
 -
-stdlib.h
--
-stdbool.h
+malloc.h
 -
 GenerateDummyText.h
 /cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/GenerateDummyText.h
-
-/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/GenerateDummyText.h
-stdbool.h
--
 

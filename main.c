@@ -4,8 +4,11 @@
 #include "GenerateDummyText.h"
 int main() {
     printf("Hello, World!\n");
-    char *data = GenerateDummyText(true,100);
-    printf("%s", data);
+    int arrsize = 100;
+   char* data = GenerateDummyText(false,arrsize);
+    for(int x = 0; x <= arrsize; x++){
+        printf("%c",*(data+x));
+    }
     free(data);
     return 0;
 }
