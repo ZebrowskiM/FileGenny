@@ -123,6 +123,33 @@ FileGenny/fast:
 	$(MAKE) -f CMakeFiles/FileGenny.dir/build.make CMakeFiles/FileGenny.dir/build
 .PHONY : FileGenny/fast
 
+FileFactory.o: FileFactory.c.o
+
+.PHONY : FileFactory.o
+
+# target to build an object file
+FileFactory.c.o:
+	$(MAKE) -f CMakeFiles/FileGenny.dir/build.make CMakeFiles/FileGenny.dir/FileFactory.c.o
+.PHONY : FileFactory.c.o
+
+FileFactory.i: FileFactory.c.i
+
+.PHONY : FileFactory.i
+
+# target to preprocess a source file
+FileFactory.c.i:
+	$(MAKE) -f CMakeFiles/FileGenny.dir/build.make CMakeFiles/FileGenny.dir/FileFactory.c.i
+.PHONY : FileFactory.c.i
+
+FileFactory.s: FileFactory.c.s
+
+.PHONY : FileFactory.s
+
+# target to generate assembly for a file
+FileFactory.c.s:
+	$(MAKE) -f CMakeFiles/FileGenny.dir/build.make CMakeFiles/FileGenny.dir/FileFactory.c.s
+.PHONY : FileFactory.c.s
+
 GenerateDummyText.o: GenerateDummyText.c.o
 
 .PHONY : GenerateDummyText.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... FileGenny"
 	@echo "... edit_cache"
+	@echo "... FileFactory.o"
+	@echo "... FileFactory.i"
+	@echo "... FileFactory.s"
 	@echo "... GenerateDummyText.o"
 	@echo "... GenerateDummyText.i"
 	@echo "... GenerateDummyText.s"

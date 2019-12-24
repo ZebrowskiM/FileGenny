@@ -9,6 +9,10 @@ int main() {
     for(int x = 0; x <= arrsize; x++){
         printf("%c",*(data+x));
     }
-    free(data);
+
+    for(int x = 0; x <= arrsize;x++){
+       // free(data+x);
+    }
+
     return 0;
 }

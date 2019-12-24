@@ -74,6 +74,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/FileFactory.c">
+			<Option target="FileGenny"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/FileFactory.h">
+			<Option target="FileGenny"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/GenerateDummyText.c">
 			<Option target="FileGenny"/>
 		</Unit>

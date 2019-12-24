@@ -1,0 +1,8 @@
+//
+// Created by Marek on 12/22/2019.
+//
+
+#ifndef FILEGENNY_FILEFACTORY_H
+#define FILEGENNY_FILEFACTORY_H
+
+#endif //FILEGENNY_FILEFACTORY_H
