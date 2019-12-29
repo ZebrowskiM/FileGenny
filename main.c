@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <malloc.h>
+#include <FileFactory.c>
 
 #include "GenerateDummyText.h"
 int main() {
@@ -9,10 +10,7 @@ int main() {
     for(int x = 0; x <= arrsize; x++){
         printf("%c",*(data+x));
     }
-
-    for(int x = 0; x <= arrsize;x++){
-       // free(data+x);
-    }
+    free(data);
 
     return 0;
 }
