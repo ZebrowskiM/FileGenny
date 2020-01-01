@@ -3,7 +3,8 @@
 //
 #ifndef FILEGENNY_SUPPORTEDFILETYPES_H
 #define FILEGENNY_SUPPORTEDFILETYPES_H
-typedef enum{ Txt = 0,
+//Generic is just .file extension
+typedef enum{ txt = 0,
     csv,
     xml,
     json,
