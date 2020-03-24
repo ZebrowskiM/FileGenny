@@ -150,6 +150,33 @@ FileFactory.c.s:
 	$(MAKE) -f CMakeFiles/FileGenny.dir/build.make CMakeFiles/FileGenny.dir/FileFactory.c.s
 .PHONY : FileFactory.c.s
 
+FileQueue.o: FileQueue.c.o
+
+.PHONY : FileQueue.o
+
+# target to build an object file
+FileQueue.c.o:
+	$(MAKE) -f CMakeFiles/FileGenny.dir/build.make CMakeFiles/FileGenny.dir/FileQueue.c.o
+.PHONY : FileQueue.c.o
+
+FileQueue.i: FileQueue.c.i
+
+.PHONY : FileQueue.i
+
+# target to preprocess a source file
+FileQueue.c.i:
+	$(MAKE) -f CMakeFiles/FileGenny.dir/build.make CMakeFiles/FileGenny.dir/FileQueue.c.i
+.PHONY : FileQueue.c.i
+
+FileQueue.s: FileQueue.c.s
+
+.PHONY : FileQueue.s
+
+# target to generate assembly for a file
+FileQueue.c.s:
+	$(MAKE) -f CMakeFiles/FileGenny.dir/build.make CMakeFiles/FileGenny.dir/FileQueue.c.s
+.PHONY : FileQueue.c.s
+
 GenerateDummyText.o: GenerateDummyText.c.o
 
 .PHONY : GenerateDummyText.o
@@ -216,6 +243,9 @@ help:
 	@echo "... FileFactory.o"
 	@echo "... FileFactory.i"
 	@echo "... FileFactory.s"
+	@echo "... FileQueue.o"
+	@echo "... FileQueue.i"
+	@echo "... FileQueue.s"
 	@echo "... GenerateDummyText.o"
 	@echo "... GenerateDummyText.i"
 	@echo "... GenerateDummyText.s"

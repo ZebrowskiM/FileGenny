@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/FileGenny.dir/FileFactory.c.o"
+  "CMakeFiles/FileGenny.dir/FileQueue.c.o"
   "CMakeFiles/FileGenny.dir/GenerateDummyText.c.o"
   "CMakeFiles/FileGenny.dir/main.c.o"
   "FileGenny.exe"

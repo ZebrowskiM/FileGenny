@@ -5,16 +5,15 @@
 #include "GenerateDummyText.h"
 int main() {
     printf("Hello, World!\n");
-    int arrsize = 100;
+    int arrsize = 999;
     char *data;
     char filepath[] = "C:\\Users\\Marek\\Desktop\\SampleFile";
 
-    data = GenerateDummyText(true, arrsize);
+    data = GenerateDummyText(false, arrsize);
     for(int x = 0; x <= arrsize; x++){
         printf("%c",*(data+x));
     }
-    printf("\n");
-    printf("\n %d",CreateFile(txt,filepath,data,arrsize));
+    CreateFile(xml,filepath,data,arrsize);
     printf("\n");
     free(data);
 

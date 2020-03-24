@@ -20,9 +20,21 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                     printf("Failed to create file");
                     exit(EXIT_FAILURE);
                 }
+                int DataSizeWithCommas = DataSize +(( DataSize * 2 )-1);
+                char* newData = calloc(DataSizeWithCommas, sizeof(newData));
+                for(int x = 0; x < DataSize; x++){
+                    if(x > 0){
+                     *(newData+x) = ',';
+                     // x%2 == 0
+                    }
+                    else{
+                        *(newData) = *(Data);
+                    }
+                }
                 fputs(Data,file);
                 fclose(file);
                 free(file);
+                free(newData);
                 return true;
             case txt:
                 strcat(filename,".txt");
@@ -44,9 +56,22 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                     printf("Failed to create file");
                     exit(EXIT_FAILURE);
                 }
-                fputs(Data,file);
+                //<Data>\n</Data>
+                int dataWithXmlSize = DataSize+16;
+                char* dataWithXml = calloc(dataWithXmlSize,sizeof(DataSize));
+                for(int x = 0;x<dataWithXmlSize;x++){
+                    if(x < 7) {
+                        *(dataWithXml + x) = "<data>\n"[x];
+                    } else if (x < DataSize) {
+                        *(dataWithXml + x) = *(Data - 7);
+                    } else{
+                        *(dataWithXml + x) = "\n</data>"[x-(DataSize+7)];
+                    }
+                }
+                fputs(dataWithXml,file);
                 fclose(file);
                 free(file);
+                free(dataWithXml);
                 return true;
             case json:
                 strcat(filename,".json");
