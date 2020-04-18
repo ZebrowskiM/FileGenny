@@ -57,21 +57,17 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                     exit(EXIT_FAILURE);
                 }
                 //<Data>\n</Data>
-                int dataWithXmlSize = DataSize+16;
-                char* dataWithXml = calloc(dataWithXmlSize,sizeof(DataSize));
-                for(int x = 0;x<dataWithXmlSize;x++){
-                    if(x < 7) {
-                        *(dataWithXml + x) = "<data>\n"[x];
-                    } else if (x < DataSize) {
-                        *(dataWithXml + x) = *(Data - 7);
-                    } else{
-                        *(dataWithXml + x) = "\n</data>"[x-(DataSize+7)];
-                    }
-                }
-                fputs(dataWithXml,file);
+                char header[44] = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n";
+                fwrite(header,1,sizeof(header),file);
+                char dataTagEnter[7] = "<data>\n";
+                char dataExitTag[8] = "\n</data>";
+                fwrite(dataTagEnter,1,sizeof(dataTagEnter),file);
+                fwrite(Data,1,DataSize,file);
+                fwrite(dataExitTag,1,sizeof(dataExitTag),file);
                 fclose(file);
                 free(file);
-                free(dataWithXml);
+                free(dataExitTag);
+                free(dataTagEnter);
                 return true;
             case json:
                 strcat(filename,".json");
