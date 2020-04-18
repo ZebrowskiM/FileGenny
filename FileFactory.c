@@ -35,6 +35,7 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 fclose(file);
                 free(file);
                 free(newData);
+
                 return true;
             case txt:
                 strcat(filename,".txt");
@@ -56,10 +57,10 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                     printf("Failed to create file");
                     exit(EXIT_FAILURE);
                 }
-                char header[44] = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n";
+                char headerXml[44] = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n";
                 char dataTagEnter[7] = "<data>\n";
                 char dataExitTag[8] = "\n</data>";
-                fwrite(header,1,sizeof(header),file);
+                fwrite(headerXml,1,sizeof(headerXml),file);
                 fwrite(dataTagEnter,1,sizeof(dataTagEnter),file);
                 fwrite(Data,1,DataSize,file);
                 fwrite(dataExitTag,1,sizeof(dataExitTag),file);
@@ -67,7 +68,7 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 free(file);
                 free(dataExitTag);
                 free(dataTagEnter);
-                free(header);
+                free(headerXml);
                 return true;
             case json:
                 strcat(filename,".json");
@@ -77,9 +78,15 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                     printf("Failed to create file");
                     exit(EXIT_FAILURE);
                 }
-                fputs(Data,file);
+                char headerJson[9] = "{\"Data\":\"";
+                char TrailerJson[2] = "\"}";
+                fwrite(headerJson,1,sizeof(headerJson),file);
+                fwrite(Data,1,DataSize,file);
+                fwrite(TrailerJson,1,sizeof(TrailerJson),file);
                 fclose(file);
                 free(file);
+                free(headerJson);
+                free(TrailerJson);
                 return true;
             case log:
                 strcat(filename,".log");

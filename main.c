@@ -4,7 +4,6 @@
 #include "FileFactory.h"
 #include "GenerateDummyText.h"
 int main() {
-    printf("Hello, World!\n");
     int arrsize = 999;
     char *data;
     char filepath[] = "C:\\Users\\Marek\\Desktop\\SampleFile";
@@ -13,8 +12,9 @@ int main() {
     for(int x = 0; x <= arrsize; x++){
         printf("%c",*(data+x));
     }
-    CreateFile(xml,filepath,data,arrsize);
-    printf("\n");
+    CreateFile(json,filepath,data,arrsize);
+    free(filepath);
+    free(arrsize);
     free(data);
 
     return 0;
