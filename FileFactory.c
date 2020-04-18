@@ -56,11 +56,10 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                     printf("Failed to create file");
                     exit(EXIT_FAILURE);
                 }
-                //<Data>\n</Data>
                 char header[44] = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n";
-                fwrite(header,1,sizeof(header),file);
                 char dataTagEnter[7] = "<data>\n";
                 char dataExitTag[8] = "\n</data>";
+                fwrite(header,1,sizeof(header),file);
                 fwrite(dataTagEnter,1,sizeof(dataTagEnter),file);
                 fwrite(Data,1,DataSize,file);
                 fwrite(dataExitTag,1,sizeof(dataExitTag),file);
@@ -68,6 +67,7 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 free(file);
                 free(dataExitTag);
                 free(dataTagEnter);
+                free(header);
                 return true;
             case json:
                 strcat(filename,".json");
