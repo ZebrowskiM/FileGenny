@@ -12,7 +12,7 @@ int main() {
     for(int x = 0; x <= arrsize; x++){
         printf("%c",*(data+x));
     }
-    CreateFile(json,filepath,data,arrsize);
+    CreateFile(csv,filepath,data,arrsize);
     free(filepath);
     free(arrsize);
     free(data);
