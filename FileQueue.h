@@ -4,5 +4,5 @@
 
 #ifndef FILEGENNY_FILEQUEUE_H
 #define FILEGENNY_FILEQUEUE_H
-
+extern void AddFile(FileType fileType,int Size);
 #endif //FILEGENNY_FILEQUEUE_H
