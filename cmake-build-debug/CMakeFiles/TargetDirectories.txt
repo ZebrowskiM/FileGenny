@@ -1,3 +1,0 @@
-/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/cmake-build-debug/CMakeFiles/FileGenny.dir
-/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/cmake-build-debug/CMakeFiles/edit_cache.dir
