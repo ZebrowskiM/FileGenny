@@ -5,13 +5,17 @@ CMakeFiles/FileGenny.dir/FileFactory.c.o: ../FileFactory.c
 CMakeFiles/FileGenny.dir/FileFactory.c.o: ../FileFactory.h
 CMakeFiles/FileGenny.dir/FileFactory.c.o: ../SupportedFileTypes.h
 
+CMakeFiles/FileGenny.dir/FileQueue.c.o: ../FileFactory.h
 CMakeFiles/FileGenny.dir/FileQueue.c.o: ../FileQueue.c
 CMakeFiles/FileGenny.dir/FileQueue.c.o: ../FileQueue.h
+CMakeFiles/FileGenny.dir/FileQueue.c.o: ../GenerateDummyText.h
+CMakeFiles/FileGenny.dir/FileQueue.c.o: ../SupportedFileTypes.h
 
 CMakeFiles/FileGenny.dir/GenerateDummyText.c.o: ../GenerateDummyText.c
 CMakeFiles/FileGenny.dir/GenerateDummyText.c.o: ../GenerateDummyText.h
 
 CMakeFiles/FileGenny.dir/main.c.o: ../FileFactory.h
+CMakeFiles/FileGenny.dir/main.c.o: ../FileQueue.h
 CMakeFiles/FileGenny.dir/main.c.o: ../GenerateDummyText.h
 CMakeFiles/FileGenny.dir/main.c.o: ../SupportedFileTypes.h
 CMakeFiles/FileGenny.dir/main.c.o: ../main.c

@@ -13,7 +13,10 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
         switch (fileType)
         {
             case csv :
+                printf("Top Csv\n");
                 strcat(filename,".csv");
+                printf(filename);
+                printf("\n");
                 file = fopen(filename,"w");
                 if(file == NULL)
                 {
@@ -32,9 +35,7 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 }
                 fputs(newData,file);
                 fclose(file);
-                free(file);
                 free(newData);
-                free(Data);
 
                 return true;
             case txt:
@@ -47,8 +48,6 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 }
                 fputs(Data,file);
                 fclose(file);
-                free(file);
-                free(Data);
                 return true;
             case xml:
                 strcat(filename,".xml");
@@ -66,10 +65,6 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 fwrite(Data,1,DataSize,file);
                 fwrite(dataExitTag,1,sizeof(dataExitTag),file);
                 fclose(file);
-                free(file);
-                free(dataExitTag);
-                free(dataTagEnter);
-                free(headerXml);
                 return true;
             case json:
                 strcat(filename,".json");
@@ -85,9 +80,6 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 fwrite(Data,1,DataSize,file);
                 fwrite(TrailerJson,1,sizeof(TrailerJson),file);
                 fclose(file);
-                free(file);
-                free(headerJson);
-                free(TrailerJson);
                 return true;
             case log:
                 strcat(filename,".log");
@@ -99,7 +91,6 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 }
                 fputs(Data,file);
                 fclose(file);
-                free(file);
                 return true;
             case generic:
                 strcat(filename,".file");
@@ -111,7 +102,6 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 }
                 fputs(Data,file);
                 fclose(file);
-                free(file);
                 return true;
         }
 

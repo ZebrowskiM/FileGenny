@@ -24,5 +24,25 @@ stdlib.h
 stdbool.h
 -
 
+/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/FileQueue.h
+
+/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/GenerateDummyText.h
+stdbool.h
+-
+
 /cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/SupportedFileTypes.h
+
+/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/main.c
+stdio.h
+-
+malloc.h
+-
+SupportedFileTypes.h
+/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/SupportedFileTypes.h
+FileFactory.h
+/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/FileFactory.h
+GenerateDummyText.h
+/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/GenerateDummyText.h
+FileQueue.h
+/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/FileQueue.h
 
