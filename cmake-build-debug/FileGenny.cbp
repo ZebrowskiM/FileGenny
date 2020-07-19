@@ -77,22 +77,22 @@
 		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/FileFactory.c">
 			<Option target="FileGenny"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/FileFactory.h">
-			<Option target="FileGenny"/>
-		</Unit>
 		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/FileQueue.c">
-			<Option target="FileGenny"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/FileQueue.h">
 			<Option target="FileGenny"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/GenerateDummyText.c">
 			<Option target="FileGenny"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/GenerateDummyText.h">
+		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/HeaderFiles/FileFactory.h">
 			<Option target="FileGenny"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/SupportedFileTypes.h">
+		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/HeaderFiles/FileQueue.h">
+			<Option target="FileGenny"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/HeaderFiles/GenerateDummyText.h">
+			<Option target="FileGenny"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/HeaderFiles/SupportedFileTypes.h">
 			<Option target="FileGenny"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Marek/Desktop/IHateGit/FileGenny/main.c">

@@ -1,19 +1,14 @@
 //
 // Created by Marek on 1/18/2020.
 //
-#include "SupportedFileTypes.h"
-#include "FileQueue.h"
-#include "GenerateDummyText.h"
-#include "FileFactory.h"
+#include "HeaderFiles/SupportedFileTypes.h"
+#include "HeaderFiles/FileQueue.h"
+#include "HeaderFiles/GenerateDummyText.h"
+#include "HeaderFiles/FileFactory.h"
 #include <stdlib.h>
 
 void AddFile(FileType fileType,int Size,char path[]){
-    printf("letsGo\n");
     char *data = GenerateDummyText(false, Size);
-    for(int x = 0; x <= Size; x++){
-        printf("%c",*(data+x));
-    }
-    printf("\n");
     CreateFile(fileType,path,data,Size);
     free(data);
 }

@@ -3,21 +3,20 @@
 //
 #include <stdbool.h>
 #include <stdio.h>
-#include "SupportedFileTypes.h"
-#include "FileFactory.h"
+#include "HeaderFiles/SupportedFileTypes.h"
+#include "HeaderFiles/FileFactory.h"
 #include <string.h>
 #include <stdlib.h>
 
 bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
     FILE * file;
+    char tempFileName[] = "";
         switch (fileType)
         {
-            case csv :
-                printf("Top Csv\n");
-                strcat(filename,".csv");
-                printf(filename);
-                printf("\n");
-                file = fopen(filename,"w");
+            case csv:
+                strcpy(tempFileName, filename);
+                strcat(tempFileName,".csv");
+                file = fopen(tempFileName,"w");
                 if(file == NULL)
                 {
                     printf("Failed to create file");
@@ -36,11 +35,11 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 fputs(newData,file);
                 fclose(file);
                 free(newData);
-
                 return true;
             case txt:
-                strcat(filename,".txt");
-                file = fopen(filename,"w");
+                strcpy(tempFileName, filename);
+                strcat(tempFileName,".txt");
+                file = fopen(tempFileName,"w");
                 if(file == NULL)
                 {
                     printf("Failed to create file");
@@ -50,8 +49,9 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 fclose(file);
                 return true;
             case xml:
-                strcat(filename,".xml");
-                file = fopen(filename,"w");
+                strcpy(tempFileName, filename);
+                strcat(tempFileName,".xml");
+                file = fopen(tempFileName,"w");
                 if(file == NULL)
                 {
                     printf("Failed to create file");
@@ -67,8 +67,9 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 fclose(file);
                 return true;
             case json:
-                strcat(filename,".json");
-                file = fopen(filename,"w");
+                strcpy(tempFileName, filename);
+                strcat(tempFileName,".json");
+                file = fopen(tempFileName,"w");
                 if(file == NULL)
                 {
                     printf("Failed to create file");
@@ -82,8 +83,9 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 fclose(file);
                 return true;
             case log:
-                strcat(filename,".log");
-                file = fopen(filename,"w");
+                strcpy(tempFileName, filename);
+                strcat(tempFileName,".log");
+                file = fopen(tempFileName,"w");
                 if(file == NULL)
                 {
                     printf("Failed to create file");
@@ -93,8 +95,9 @@ bool CreateFile(FileType fileType, char filename[], char* Data,int DataSize){
                 fclose(file);
                 return true;
             case generic:
-                strcat(filename,".file");
-                file = fopen(filename,"w");
+                strcpy(tempFileName, filename);
+                strcat(tempFileName,".file");
+                file = fopen(tempFileName,"w");
                 if(file == NULL)
                 {
                     printf("Failed to create file");
