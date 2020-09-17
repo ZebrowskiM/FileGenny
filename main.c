@@ -1,22 +1,17 @@
 #include <stdio.h>
 #include <malloc.h>
-#include "SupportedFileTypes.h"
-#include "FileFactory.h"
-#include "GenerateDummyText.h"
+#include "HeaderFiles/SupportedFileTypes.h"
+#include "HeaderFiles/FileFactory.h"
+#include "HeaderFiles/GenerateDummyText.h"
+#include "HeaderFiles/FileQueue.h"
 int main() {
-    printf("Hello, World!\n");
-    int arrsize = 100;
-    char *data;
-    char filepath[] = "C:\\Users\\Marek\\Desktop\\SampleFile";
-
-    data = GenerateDummyText(true, arrsize);
-    for(int x = 0; x <= arrsize; x++){
-        printf("%c",*(data+x));
-    }
-    printf("\n");
-    printf("\n %d",CreateFile(txt,filepath,data,arrsize));
-    printf("\n");
-    free(data);
-
+    int arrsize = 999;
+    const char filepath[] = "C:\\Users\\Marek\\Desktop\\Sample\\newFile";
+    printf("Begin\n");
+    AddFile(txt,arrsize,filepath);
+    AddFile(csv,arrsize,filepath);
+    AddFile(log,arrsize,filepath);
+    AddFile(generic,arrsize,filepath);
+    AddFile(json,arrsize,filepath);
     return 0;
 }
