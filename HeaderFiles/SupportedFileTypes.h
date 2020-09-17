@@ -10,4 +10,4 @@ typedef enum{ txt = 0,
     json,
     log,
     generic}FileType;
-#endif //FILEGENNY_SUPPORTEDFILETYPES_H
+#endif

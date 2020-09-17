@@ -9,10 +9,6 @@
 #include "HeaderFiles/GenerateDummyText.h"
 
 
-
-//0-127 ascii
-// ASCII vals start at 64 - 127
-// 1024 charcters
 char* GenerateDummyText(bool useLetterOnly, int Size) {
     char* data = calloc(Size, sizeof(data));
     srand ( time(NULL) );

@@ -45,3 +45,4 @@ cmake-build-debug/CMakeFiles/FileGenny.dir/C.includecache
 cmake-build-debug/FileGenny.exe.stackdump
 *.stackdump
 *.stackdump
+/cmake-build-debug/
