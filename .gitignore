@@ -46,3 +46,9 @@ cmake-build-debug/FileGenny.exe.stackdump
 *.stackdump
 *.stackdump
 /cmake-build-debug/
+/.vs
+/out/build/x64-Debug (default)
+/out/build/x64-Debug
+/out/build/Mingw64-Release
+/DLL/FileGenny/.idea
+/DLL/FileGenny/cmake-build-debug
